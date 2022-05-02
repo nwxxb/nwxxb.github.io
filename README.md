@@ -1,2 +1,2 @@
 # nawwab.github.io
-I put all of my articles markdown here.
+I put all of my generated articles html here.
