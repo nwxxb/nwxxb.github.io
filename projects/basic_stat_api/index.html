@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>nwxxb talk about - Basic Stat Api</title>
+    <link rel="stylesheet" href="/default.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">
+        Basic Stat Api
+      </h1>
+      <div class="header__nav">
+        <a class="back-button" href="/">&#8592index</a>
+        Jul 19, 2023
+      </div>
+    </header>
+    <main class="markdown-body">
+      <p><a href="https://github.com/nwxxb/basic_stat_api">Basic Stat Api</a> adalah HTTP API yang menyediakan kalkulasi statistika dasar. Proyek ini terinspirasi dari <a href="https://trendapi.org/">demo API untuk gem ‘trend-ruby’ yang ditulis oleh Andrew Kane</a>. Proyek ini adalah media belajar dalam membuat HTTP API, TDD, dan pemrograman dengan bahasa ruby.</p>
+
+<p>Pada proyek ini, <a href="https://sinatrarb.com/">sinatra</a> digunakan karena saya ingin mencoba untuk mengetahui beberapa <em>low level component</em> yang ada pada HTTP API (yang mana semuanya disediakan secara <em>default</em> oleh <a href="https://richstone.io/why-do-we-call-it-ruby-and-rails-magic/">‘<em>rails magic</em>’</a>) dan mencoba untuk meminimalisir <em>dependencies</em> yang dibutuhkan. Selain itu beberapa library dan tools yang digunakan antara lain:</p>
+<ul>
+  <li><a href="https://rspec.info/">rspec</a> untuk melakukan test fitur. Rspec menyediakan beberapa DSL dan matcher yang sangat membantu dalam menulis pengujian yang ekspresif.</li>
+  <li><a href="https://github.com/rubocop/rubocop">rubocop</a> untuk proses <em>linting</em>.</li>
+  <li><a href="https://github.com/tmm1/ripper-tags">ripper-tags</a> untuk memetakan seluruh nama kelas menjadi <a href="https://en.wikipedia.org/wiki/Ctags">ctags</a> untuk memudahkan eksplor dan perpindahan file pada text editor.</li>
+  <li><a href="https://github.com/pry/pry">pry</a> alat untuk memudahkan debugging.</li>
+</ul>
+
+<p>Proyek ini dimulai dari penggunaan <a href="https://github.com/nwxxb/basic_stat_api/tree/main/spec/features">testing</a> pada bagian fitur, yakni <em>testing</em> pada tiap <em>endpoint</em> dan <em>middleware</em> yang saya gunakan. saya tidak melakukan <em>stub</em> dan <em>mock</em> karena sejauh ini baik itu fitur maupun <em>test case</em> belum terhitung banyak sehingga waktu eksekusi test masih terbilang cepat (total sekitar 11 detik). Hal ini tentu perlu menjadi catatan kedepannya jika fitur dan <em>test case</em> terus bertambah, mungkin dengan mengantisipasi <em>edge case</em> dengan unit test ketimbang acceptance test/test dengan dependensi yang memperlambat eksekusi.</p>
+
+<pre><code>example_id                                      | status | run_time        |
+----------------------------------------------- | ------ | --------------- |
+./spec/features/mean_spec.rb[1:1]               | passed | 0.00308 seconds |
+./spec/features/mean_spec.rb[1:2]               | passed | 0.00431 seconds |
+./spec/features/median_spec.rb[1:1]             | passed | 0.00328 seconds |
+./spec/features/median_spec.rb[1:2]             | passed | 0.04989 seconds |
+./spec/features/mode_spec.rb[1:1]               | passed | 0.00376 seconds |
+./spec/features/mode_spec.rb[1:2]               | passed | 0.00467 seconds |
+./spec/features/rate_limiting_spec.rb[1:1]      | passed | 0.01857 seconds |
+./spec/features/rate_limiting_spec.rb[1:2]      | passed | 0.03867 seconds |
+./spec/features/rate_limiting_spec.rb[1:3]      | passed | 11.04 seconds   |
+./spec/features/standard_deviation_spec.rb[1:1] | passed | 0.00556 seconds |
+./spec/features/standard_deviation_spec.rb[1:2] | passed | 0.00826 seconds |
+</code></pre>
+<!-- 
+please refer to sidenotes/basic_stat_api
+TODO
+- [ ] show how you start this project
+	- [ ] starting repo
+	- [ ] working on 4 first feature: mean, mode, median, & std deviation
+	- [ ] adding rate limiting
+	- [ ] adding top module namespace
+-->
+
+      <a rel="license" style="margin: 8px 0;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+
+    </main>
+  </body>
+</html>
