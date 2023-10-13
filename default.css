@@ -350,39 +350,6 @@ template {
   display: none;
 }
 
-#index_desc {
-  font-size: 20px;
-}
-
-.header__nav {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.posts__list {
-  padding: 0;
-  list-style: none;
-}
-
-.post__list {
-  margin-bottom: 16px;
-}
-
-.posts__list-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.post__list-item__date {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.post__list-item__tags {
-  font-size: 1.1rem;
-}
 
 /* Sakura.css v1.3.1
  * ================
@@ -571,3 +538,79 @@ label, legend, fieldset {
   display: block;
   margin-bottom: .5rem;
   font-weight: 600; }
+
+/**
+ * Custom css
+ */
+
+#index_desc {
+  font-size: 20px;
+  margin: 4px 0px 4px 0px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.menu {
+  display: flex;
+  flex: auto;
+  margin: 8px 0px 8px 0px;
+}
+
+.menu__posts-button, .menu__projects-button {
+  flex: auto;
+  background-color: transparent;
+  color: #4a4a4a;
+  border: 0px;
+}
+
+.menu__posts-button:hover:enabled, .menu__projects-button:hover:enabled,
+.menu__posts-button:focus:enabled, .menu__projects-button:focus:enabled {
+  background-color: #d2d2d2;
+  color: #4a4a4a;
+}
+
+.posts__items, .projects__list {
+  padding: 0;
+  list-style: none;
+  font-size: 2rem;
+}
+
+.posts__item, .project__list {
+  margin-bottom: 16px;
+}
+
+.posts__item-title, .projects__list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.posts__item-date, .project__list-item__date {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.posts__item-tags, .project__list-item__tags {
+  font-size: 1.1rem;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.posts__item-tag {
+  margin: 0px 8px 0px 0px;
+}
+
+.project__list-item__a {
+  font-size: 1.1rem;
+  color: pink;
+}
+
+.project__list-description {
+  font-size: 1.1rem;
+}
