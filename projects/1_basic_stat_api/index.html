@@ -27,7 +27,10 @@
   <li><a href="https://github.com/pry/pry">pry</a> alat untuk memudahkan debugging.</li>
 </ul>
 
-<p>Proyek ini dimulai dari penggunaan <a href="https://github.com/nwxxb/basic_stat_api/tree/main/spec/features">testing</a> pada bagian fitur, yakni <em>testing</em> pada tiap <em>endpoint</em> dan <em>middleware</em> yang saya gunakan. saya tidak melakukan <em>stub</em> dan <em>mock</em> karena sejauh ini baik itu fitur maupun <em>test case</em> belum terhitung banyak sehingga waktu eksekusi test masih terbilang cepat (total sekitar 11 detik). Hal ini tentu perlu menjadi catatan kedepannya jika fitur dan <em>test case</em> terus bertambah, mungkin dengan mengantisipasi <em>edge case</em> dengan unit test ketimbang acceptance test/test dengan dependensi yang memperlambat eksekusi.</p>
+<hr />
+
+<h2 id="initiate">Initiate</h2>
+<p>Proyek ini dimulai dari penggunaan <a href="https://github.com/nwxxb/basic_stat_api/tree/main/spec/features">testing</a> pada bagian fitur, yakni <em>testing</em> pada tiap <em>endpoint</em> dan <em>custom middleware</em>. saya tidak melakukan <em>stub</em> dan <em>mock</em> karena sejauh ini baik itu fitur maupun <em>test case</em> belum terhitung banyak sehingga waktu eksekusi test masih terbilang cepat(kecuali untuk pengujian rate limiting yang mana membutuhkan fungsi <code>sleep</code> untuk mensimulasi rate limit yang kadaluarsa dan tidak bisa diakali dengan <a href="https://github.com/travisjeffery/timecop">Timecop</a> karena perhitungan berlangsung di redis). Hal ini tentu perlu menjadi catatan kedepannya jika fitur dan <em>test case</em> terus bertambah, mungkin dengan melakukan uji <em>edge case</em> menggunakan unit test ketimbang acceptance test/test yang berpotensi membutuhkan waktu yang lama.</p>
 
 <pre><code>example_id                                      | status | run_time        |
 ----------------------------------------------- | ------ | --------------- |
@@ -43,15 +46,18 @@
 ./spec/features/standard_deviation_spec.rb[1:1] | passed | 0.00556 seconds |
 ./spec/features/standard_deviation_spec.rb[1:2] | passed | 0.00826 seconds |
 </code></pre>
-<!-- 
-please refer to sidenotes/basic_stat_api
-TODO
-- [ ] show how you start this project
-	- [ ] starting repo
-	- [ ] working on 4 first feature: mean, mode, median, & std deviation
-	- [ ] adding rate limiting
-	- [ ] adding top module namespace
--->
+
+<h2 id="adding-landing-page">Adding landing page</h2>
+<p>Untuk menampung demo (dan mungkin dokumentasi tiap endpoint) dimulailah fitur landing page. Tidak seperti pengujian pada public endpoint, Capybara digunakan untuk melakukan pengujian tampilan (atau biasa disebut sebagai <em>acceptance test</em>).</p>
+
+<pre><code>example_id                                      | status | run_time        |
+----------------------------------------------- | ------ | --------------- |
+./spec/features/landing_page_spec.rb[1:1]       | passed | 0.00949 seconds |
+./spec/features/landing_page_spec.rb[1:2]       | passed | 1.25 seconds    |
+</code></pre>
+
+<p>Kenaikan waktu eksekusi pada <code>landing_page_spec:2</code> terjadi karena <a href="https://github.com/teamcapybara/capybara">Capybara</a> membutuhkan <em>driver</em> javascript (pada project ini digunakan <a href="https://github.com/rubycdp/cuprite">Cuprite</a>) yang tidak secepat ketika Capybara menggunakan driver rack-test yang <a href="https://github.com/teamcapybara/capybara#racktest">secara langsung berkomunikasi dengan <em>rack interfaces</em> sehingga tidak perlu memulai server</a>.</p>
+
 
       <a rel="license" style="margin: 8px 0;" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
 
