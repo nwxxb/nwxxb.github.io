@@ -1,0 +1,1 @@
+document.getElementById("toggle-theme-button").addEventListener("click",e=>{const t=document.documentElement;let n=localStorage.getItem("theme");t.dataset.theme=n==="light"?"dark":"light",localStorage.setItem("theme",t.dataset.theme)})
