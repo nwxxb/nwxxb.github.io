@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hello my name is nzia on nwxxb</title>
-    <link>https://example.org/</link>
+    <link>https://nwxxb.github.io/</link>
     <description>Recent content in Hello my name is nzia on nwxxb</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Mar 2026 12:22:51 +0700</lastBuildDate>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nwxxb.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Might Be An FAQ</title>
-      <link>https://example.org/posts/might_be_an_faq/</link>
+      <link>https://nwxxb.github.io/posts/might_be_an_faq/</link>
       <pubDate>Mon, 09 Mar 2026 12:22:51 +0700</pubDate>
-      <guid>https://example.org/posts/might_be_an_faq/</guid>
+      <guid>https://nwxxb.github.io/posts/might_be_an_faq/</guid>
       <description>&lt;h1 id=&#34;1-what-is-this&#34;&gt;1. What is this?&lt;/h1&gt;&#xA;&lt;p&gt;Hey, welcome to my blog. Maybe I can just directly explain to you some sections in this blog: Basically, this blog currently (might get updated later in the future) consists of two sections: Projects and Posts.&lt;/p&gt;&#xA;&lt;p&gt;Some projects might have different “shapes”: 1) sometimes you can see a single page post (just like what posts contain). Or, sometimes it can also contain a bunch of small notes. My biggest reason to create those shapes is to add flexibility and to eliminate my excuses to over-complicate my writing.&lt;/p&gt;</description>
     </item>
     <item>
       <title>This Blog</title>
-      <link>https://example.org/projects/this_blog/</link>
+      <link>https://nwxxb.github.io/projects/this_blog/</link>
       <pubDate>Fri, 06 Mar 2026 18:49:00 +0700</pubDate>
-      <guid>https://example.org/projects/this_blog/</guid>
+      <guid>https://nwxxb.github.io/projects/this_blog/</guid>
       <description>this blog is generated using hugo</description>
     </item>
     <item>
       <title>Solve Low Hanging Problems</title>
-      <link>https://example.org/projects/dumarket/solve_low_hanging_problems/</link>
+      <link>https://nwxxb.github.io/projects/dumarket/solve_low_hanging_problems/</link>
       <pubDate>Thu, 05 Mar 2026 11:00:00 +0700</pubDate>
-      <guid>https://example.org/projects/dumarket/solve_low_hanging_problems/</guid>
+      <guid>https://nwxxb.github.io/projects/dumarket/solve_low_hanging_problems/</guid>
       <description>&lt;p&gt;Before I deploy this app, I have to fix some “obvious” problems, and before doing that, I &lt;a href=&#34;https://github.com/nwxxb/dumarket/commit/c4dc90d2d05403c5c52f2a425ee10f6209f85271&#34;&gt;set up&lt;/a&gt; some scripts to fetch some nice graphs (so we can see the improvement):&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;a &lt;a href=&#34;https://github.com/nwxxb/dumarket/blob/c4dc90d2d05403c5c52f2a425ee10f6209f85271/scripts/docker_monitor.sh&#34;&gt;simple bash loop&lt;/a&gt; that calls docker stat and stores its stdout to a file&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;a &lt;a href=&#34;https://github.com/nwxxb/dumarket/blob/c4dc90d2d05403c5c52f2a425ee10f6209f85271/scripts/docker_stats_and_lograge_parser.rb&#34;&gt;ruby script&lt;/a&gt; that parses docker stats from point number 1, along with data from the log file (I use lograge to get nicely JSON-formatted lines) and parses it with vega-lite&lt;/p&gt;</description>
     </item>
     <item>
       <title>Solodo</title>
-      <link>https://example.org/projects/solodo/</link>
+      <link>https://nwxxb.github.io/projects/solodo/</link>
       <pubDate>Sun, 16 Jul 2023 16:35:00 +0700</pubDate>
-      <guid>https://example.org/projects/solodo/</guid>
+      <guid>https://nwxxb.github.io/projects/solodo/</guid>
       <description>Static and simple to-do list app. All data saved in the browser’s local storage. Created using React.js</description>
     </item>
     <item>
       <title>Pengalaman Menggunakan VIM</title>
-      <link>https://example.org/posts/pengalaman_menggunakan_vim/</link>
+      <link>https://nwxxb.github.io/posts/pengalaman_menggunakan_vim/</link>
       <pubDate>Fri, 29 Apr 2022 12:26:24 +0700</pubDate>
-      <guid>https://example.org/posts/pengalaman_menggunakan_vim/</guid>
+      <guid>https://nwxxb.github.io/posts/pengalaman_menggunakan_vim/</guid>
       <description>&lt;p&gt;Dulu, saya adalah pengguna VSCode dan sangat bergantung pada GUI, dan saya sudah merasa cukup puas dengan beberapa plugin dan sering menggunakan mouse tanpa memedulikan shortcut. Sampai suatu saat karena project yang dikerjakan semakin besar dan melibatkan banyak teknologi saya terpaksa untuk memilih dua pilihan: 1. mencari text editor yang lebih ringan dan 2. mencari laptop yang lebih mumpuni. dan tentu sebagai mahasiswa yang belum memiliki penghasilan tetap saya memilih pilihan pertama. Tentu alasan ini mungkin tidak selaras dengan stigma atau ekspektasi yang terpaut pada pengguna vim pada umumnya: dapat menulis kode lebih cepat karena meniadakan penggunaan mouse. Ketika saya ditanya kenapa saya menggunakan vim justru saya akan menjawab: karena laptop saya bukan macbook yang cukup mumpuni untuk membuka VSCode dan banyak aplikasi secara bersamaan.&lt;/p&gt;</description>
     </item>
   </channel>

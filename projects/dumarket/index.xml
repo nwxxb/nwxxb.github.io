@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dumarket on nwxxb</title>
-    <link>https://example.org/projects/dumarket/</link>
+    <link>https://nwxxb.github.io/projects/dumarket/</link>
     <description>Recent content in Dumarket on nwxxb</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Mar 2026 11:00:00 +0700</lastBuildDate>
-    <atom:link href="https://example.org/projects/dumarket/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nwxxb.github.io/projects/dumarket/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Solve Low Hanging Problems</title>
-      <link>https://example.org/projects/dumarket/solve_low_hanging_problems/</link>
+      <link>https://nwxxb.github.io/projects/dumarket/solve_low_hanging_problems/</link>
       <pubDate>Thu, 05 Mar 2026 11:00:00 +0700</pubDate>
-      <guid>https://example.org/projects/dumarket/solve_low_hanging_problems/</guid>
+      <guid>https://nwxxb.github.io/projects/dumarket/solve_low_hanging_problems/</guid>
       <description>&lt;p&gt;Before I deploy this app, I have to fix some “obvious” problems, and before doing that, I &lt;a href=&#34;https://github.com/nwxxb/dumarket/commit/c4dc90d2d05403c5c52f2a425ee10f6209f85271&#34;&gt;set up&lt;/a&gt; some scripts to fetch some nice graphs (so we can see the improvement):&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;a &lt;a href=&#34;https://github.com/nwxxb/dumarket/blob/c4dc90d2d05403c5c52f2a425ee10f6209f85271/scripts/docker_monitor.sh&#34;&gt;simple bash loop&lt;/a&gt; that calls docker stat and stores its stdout to a file&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;a &lt;a href=&#34;https://github.com/nwxxb/dumarket/blob/c4dc90d2d05403c5c52f2a425ee10f6209f85271/scripts/docker_stats_and_lograge_parser.rb&#34;&gt;ruby script&lt;/a&gt; that parses docker stats from point number 1, along with data from the log file (I use lograge to get nicely JSON-formatted lines) and parses it with vega-lite&lt;/p&gt;</description>
     </item>
   </channel>
